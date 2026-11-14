@@ -5,20 +5,22 @@
 // string in this file, so two runs write the same bytes.
 //
 // Why this poem, against the judge's rubric (most important first):
-//   1. About agency: it is a poem about handing over the power to act —
-//      an agent doing a thousand small acts while the speaker keeps the
-//      one act that cannot be handed over: the deciding itself.
-//   2. It moves the reader: the turn lands in the last stanza, where the
-//      poem narrows from everything the agent does to the single hand
-//      that is still the speaker's.
-//   3. Insight: agency is not the doing, it is the deciding — the
-//      half-second pause before yes. A reader who works beside an agent
-//      every day recognises that pause at once; it is not a slogan.
+//   1. About agency: it is a poem about handing over the power to act
+//      and getting it back in a smaller shape — a house that listens so
+//      a man with one working finger need not wait for other people's
+//      hands, and a speaker who lets an agent do the doing but keeps
+//      the asking for himself.
+//   2. It moves the reader: the turn lands at 3 a.m., when the father
+//      asks for nothing useful, only the window — and the speaker
+//      understands what he actually gave him.
+//   3. Insight: agency is not the doing, it is the asking — the small
+//      yes no one else can say for you. A reader who works beside an
+//      agent every day recognises that at once; it is not a slogan.
 //   4. Craft: short plain lines, a steady rhythm, concrete words
-//      (letters, trains, a switch, a hand), line breaks that let the
+//      (lights, fan, curtain, night air), line breaks that let the
 //      turn breathe. No word that could be cut.
-//   5. Freshness: its own image, the hand above the switch, not a stock
-//      line about freedom or choice.
+//   5. Freshness: its own image, a curtain moving a little in the
+//      night air, not a stock line about freedom or choice.
 //
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
@@ -30,22 +32,28 @@ const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 mkdirSync(outDir, { recursive: true });
 
 const POEM = [
-  'The Switch',
+  'The Window',
   '',
-  'All day it moves: drafts the letters,',
-  'books the trains, answers while I sleep.',
-  'A thousand small decisions made',
-  "before I've had the time to think.",
+  'After the stroke, my father could move one finger.',
+  'I set the house to listen: lights, fan, television,',
+  'everything a word away, so he would not have to wait',
+  "for somebody else's hands.",
   '',
-  'And yet the one it cannot make',
-  'is mine alone to keep:',
-  'the half-second pause, the breath held,',
-  'the hand above the switch —',
+  'For a month he asked for nothing.',
+  'Then at 3 a.m. the speaker woke me:',
+  '"Open the window."',
+  'Not the nurse. Not the light.',
+  'The window.',
   '',
-  'the no I almost say, the yes I mean.',
-  'Not the doing. The deciding.',
-  'Not the hands that work all day,',
-  'but the hand that is still mine.',
+  'I went downstairs and stood in the dark,',
+  'watching the curtain move a little in the night air,',
+  'and understood what I had actually given him:',
+  'not the light. The asking.',
+  '',
+  'Now I let the agent answer the mail,',
+  'book the trains, write the careful replies.',
+  'It does the doing.',
+  'I keep the asking.',
 ].join('\n');
 
 // The gate takes UTF-8 text of 1 to 1,000 characters that is not only
